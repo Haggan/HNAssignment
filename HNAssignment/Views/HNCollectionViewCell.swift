@@ -12,6 +12,8 @@ class HNCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topCollection: LabelCollection!
+    @IBOutlet weak var bottomCollection: LabelCollection!
     
     var thumbnailIdentifier: String?
 }

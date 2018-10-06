@@ -10,6 +10,8 @@
 		B92266832168FF0000D874D3 /* CollectionViewListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92266822168FF0000D874D3 /* CollectionViewListDataSource.swift */; };
 		B9226687216900D400D874D3 /* HNCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9226685216900D400D874D3 /* HNCollectionViewCell.swift */; };
 		B9226688216900D400D874D3 /* HNCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9226686216900D400D874D3 /* HNCollectionViewCell.xib */; };
+		B922668A21692EF600D874D3 /* LabelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922668921692EF600D874D3 /* LabelCollection.swift */; };
+		B922668C21692F1300D874D3 /* LabelCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B922668B21692F1300D874D3 /* LabelCollection.xib */; };
 		B92AF6422168E02D00B43FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF6412168E02D00B43FB7 /* AppDelegate.swift */; };
 		B92AF6442168E02D00B43FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF6432168E02D00B43FB7 /* ViewController.swift */; };
 		B92AF6472168E02D00B43FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92AF6452168E02D00B43FB7 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		B92266822168FF0000D874D3 /* CollectionViewListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewListDataSource.swift; sourceTree = "<group>"; };
 		B9226685216900D400D874D3 /* HNCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9226686216900D400D874D3 /* HNCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HNCollectionViewCell.xib; sourceTree = "<group>"; };
+		B922668921692EF600D874D3 /* LabelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollection.swift; sourceTree = "<group>"; };
+		B922668B21692F1300D874D3 /* LabelCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollection.xib; sourceTree = "<group>"; };
 		B92AF63E2168E02D00B43FB7 /* HNAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92AF6412168E02D00B43FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B92AF6432168E02D00B43FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				B9226685216900D400D874D3 /* HNCollectionViewCell.swift */,
 				B9226686216900D400D874D3 /* HNCollectionViewCell.xib */,
+				B922668921692EF600D874D3 /* LabelCollection.swift */,
+				B922668B21692F1300D874D3 /* LabelCollection.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 			files = (
 				B9226688216900D400D874D3 /* HNCollectionViewCell.xib in Resources */,
 				B92AF64C2168E02E00B43FB7 /* LaunchScreen.storyboard in Resources */,
+				B922668C21692F1300D874D3 /* LabelCollection.xib in Resources */,
 				B92AF6492168E02E00B43FB7 /* Assets.xcassets in Resources */,
 				B92AF6872168E4A600B43FB7 /* Result.json in Resources */,
 				B92AF6472168E02D00B43FB7 /* Main.storyboard in Resources */,
@@ -393,6 +400,7 @@
 				B92AF6772168E23200B43FB7 /* ListService.swift in Sources */,
 				B92AF6732168E1CC00B43FB7 /* ApiService.swift in Sources */,
 				B92AF6752168E20000B43FB7 /* ApiEnums.swift in Sources */,
+				B922668A21692EF600D874D3 /* LabelCollection.swift in Sources */,
 				B92AF67F2168E39F00B43FB7 /* AdEnums.swift in Sources */,
 				B92AF6892168E61F00B43FB7 /* HemnetMockApiService.swift in Sources */,
 				B93E36502168E9E20023C4E3 /* HemnetImageCache.swift in Sources */,

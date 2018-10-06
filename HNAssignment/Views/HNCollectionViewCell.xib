@@ -19,8 +19,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-FG-6lg">
-                        <rect key="frame" x="0.0" y="0.0" width="88" height="188"/>
+                        <rect key="frame" x="0.0" y="50" width="88" height="88"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="88" id="2Ro-o3-jUK"/>
                             <constraint firstAttribute="width" constant="88" id="q2C-na-eqm"/>
                         </constraints>
                     </imageView>
@@ -38,23 +39,42 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HZ-mD-23E">
-                        <rect key="frame" x="96" y="38" width="276" height="18"/>
+                        <rect key="frame" x="96" y="34" width="276" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3H-TC-GIu" customClass="LabelCollection" customModule="HNAssignment" customModuleProvider="target">
+                        <rect key="frame" x="96" y="56" width="276" height="16"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Zzg-oE-FaG"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqg-IX-l2c" customClass="LabelCollection" customModule="HNAssignment" customModuleProvider="target">
+                        <rect key="frame" x="96" y="76" width="276" height="16"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="p8G-FD-2re"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="bqg-IX-l2c" firstAttribute="top" secondItem="m3H-TC-GIu" secondAttribute="bottom" constant="4" id="2ws-Vc-UMh"/>
+                <constraint firstAttribute="trailing" secondItem="bqg-IX-l2c" secondAttribute="trailing" constant="8" id="4kO-Lc-RT3"/>
                 <constraint firstItem="i48-0s-VqW" firstAttribute="bottom" secondItem="Zu2-UN-KAu" secondAttribute="bottom" id="5Gi-9M-j2Q"/>
                 <constraint firstAttribute="trailing" secondItem="i48-0s-VqW" secondAttribute="trailing" constant="8" id="6aR-7u-qtd"/>
+                <constraint firstAttribute="trailing" secondItem="m3H-TC-GIu" secondAttribute="trailing" constant="8" id="7Ui-TW-bOt"/>
                 <constraint firstItem="i48-0s-VqW" firstAttribute="leading" secondItem="Zu2-UN-KAu" secondAttribute="trailing" constant="8" id="DCt-Zl-eiN"/>
+                <constraint firstItem="LAZ-FG-6lg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="FAd-a7-C1a"/>
                 <constraint firstItem="LAZ-FG-6lg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FSX-On-HWU"/>
                 <constraint firstItem="Zu2-UN-KAu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Ofu-Y6-oET"/>
-                <constraint firstAttribute="bottom" secondItem="LAZ-FG-6lg" secondAttribute="bottom" id="T9X-HB-rCK"/>
-                <constraint firstItem="LAZ-FG-6lg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cdz-i1-UvR"/>
-                <constraint firstItem="4HZ-mD-23E" firstAttribute="top" secondItem="Zu2-UN-KAu" secondAttribute="bottom" constant="8" id="eJj-1T-Ban"/>
+                <constraint firstItem="m3H-TC-GIu" firstAttribute="top" secondItem="4HZ-mD-23E" secondAttribute="bottom" constant="4" id="Z97-FH-Z2e"/>
+                <constraint firstItem="4HZ-mD-23E" firstAttribute="top" secondItem="Zu2-UN-KAu" secondAttribute="bottom" constant="4" id="eJj-1T-Ban"/>
+                <constraint firstItem="m3H-TC-GIu" firstAttribute="leading" secondItem="LAZ-FG-6lg" secondAttribute="trailing" constant="8" id="fo3-rl-dzP"/>
                 <constraint firstAttribute="trailing" secondItem="4HZ-mD-23E" secondAttribute="trailing" constant="8" id="hXK-nc-Uvt"/>
+                <constraint firstItem="bqg-IX-l2c" firstAttribute="leading" secondItem="LAZ-FG-6lg" secondAttribute="trailing" constant="8" id="kgI-R1-H7k"/>
                 <constraint firstItem="Zu2-UN-KAu" firstAttribute="leading" secondItem="LAZ-FG-6lg" secondAttribute="trailing" constant="8" id="vl7-Ub-RDU"/>
                 <constraint firstItem="4HZ-mD-23E" firstAttribute="leading" secondItem="LAZ-FG-6lg" secondAttribute="trailing" constant="8" id="yQD-V4-f5e"/>
             </constraints>
@@ -62,8 +82,10 @@
             <size key="customSize" width="380" height="188"/>
             <connections>
                 <outlet property="areaLabel" destination="4HZ-mD-23E" id="bAb-kC-1Qt"/>
+                <outlet property="bottomCollection" destination="bqg-IX-l2c" id="g3X-1P-k6u"/>
                 <outlet property="imageView" destination="LAZ-FG-6lg" id="ysG-0h-kJ9"/>
                 <outlet property="titleLabel" destination="i48-0s-VqW" id="HE8-dR-Pwj"/>
+                <outlet property="topCollection" destination="m3H-TC-GIu" id="WFu-l5-EwD"/>
             </connections>
             <point key="canvasLocation" x="-110" y="-142"/>
         </collectionViewCell>

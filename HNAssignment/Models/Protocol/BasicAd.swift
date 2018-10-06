@@ -15,4 +15,8 @@ protocol BasicAd {
     var location: String { get }
     var price: String { get }
     var thumbnail: String { get }
+    var livingArea: Int { get }
+    var numberOfRooms: Int { get }
+    var daysOnHemnet: Int { get }
+    var monthlyFee: String { get }
 }

@@ -63,9 +63,28 @@ extension CollectionViewListDataSource: ContentDataSource {
                 as? HNCollectionViewCell else { fatalError("Cell could not be founds, CRASH!") }
         
         let ad = ads[indexPath.item]
+        setCellValues(cell, with: ad)
+        setCellImage(cell, with: ad)
         
+        return cell
+    }
+}
+
+// MARK: - Helper functions
+extension CollectionViewListDataSource {
+    func setCellValues(_ cell: HNCollectionViewCell, with ad: BasicAd) {
         cell.titleLabel.text = ad.title
         cell.areaLabel.text = ad.location
+        
+        cell.topCollection.leftLabel.text = ad.price
+        cell.topCollection.middleLabel.text = String(ad.livingArea) + " m2"
+        cell.topCollection.rightLabel.text = String(ad.numberOfRooms)  + " rum"
+        
+        cell.bottomCollection.leftLabel.text = ad.monthlyFee
+        cell.bottomCollection.rightLabel.text = String(ad.daysOnHemnet) + " dagar"
+    }
+    
+    func setCellImage(_ cell: HNCollectionViewCell, with ad: BasicAd) {
         cell.thumbnailIdentifier = ad.thumbnail
         
         imageCache.image(for: ad.thumbnail) { (image, identifier) in
@@ -75,8 +94,5 @@ extension CollectionViewListDataSource: ContentDataSource {
                 }
             }
         }
-        
-        
-        return cell
     }
 }

@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 extension ViewController {
     var collectionViewLayout: UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.frame.size.width, height: 88)
+        layout.itemSize = CGSize(width: collectionView.frame.size.width, height: 112)
         
         return layout
     }
