@@ -30,8 +30,6 @@ class HNCellProvider {
             collectionView.dequeueReusableCell(withReuseIdentifier: HNCellProvider.reuseIdentifier, for: indexPath)
                 as? HNCollectionViewCell else { fatalError("Cell could not be dequeued") }
         
-        //TODO: Implement handling of deactivated listings
-        
         setCellValues(cell, with: ad)
         setCellImage(cell, with: ad)
         
@@ -42,6 +40,8 @@ class HNCellProvider {
 // MARK: - Helper functions
 extension HNCellProvider {
     private func setCellValues(_ cell: HNCollectionViewCell, with ad: BasicAd) {
+        
+        // Code for setting label text using the ad values
         cell.titleLabel.text = ad.title
         cell.areaLabel.text = ad.location
         
@@ -51,6 +51,19 @@ extension HNCellProvider {
         
         cell.bottomCollection.leftLabel.text = ad.monthlyFee
         cell.bottomCollection.rightLabel.text = String(ad.daysOnHemnet) + " dagar"
+        
+        // Set the listing "mode" of the cell
+        if ad.listing == .active {
+            cell.coverView.isHidden = true
+            cell.removedLabel.isHidden = true
+        } else {
+            cell.coverView.isHidden = false
+            cell.removedLabel.isHidden = false
+        }
+        
+        // Discussion: I could move listing mode to the cell and invoke it from there, but I am of the opinion
+        // that cells and other UI elements should be pretty dumb, and not know what they are used for.
+        // Therefore I use instances like this CellProvider instead
     }
     
     private func setCellImage(_ cell: HNCollectionViewCell, with ad: BasicAd) {

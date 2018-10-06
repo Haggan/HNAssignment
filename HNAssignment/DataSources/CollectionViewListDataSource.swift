@@ -52,6 +52,8 @@ extension CollectionViewListDataSource: ContentDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let ad = ads[indexPath.item]
+        
+        // Inject cellProvider?
         return cellProvider.configureCell(´for´: ad,
                                           in: collectionView,
                                           at: indexPath)
