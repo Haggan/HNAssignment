@@ -14,12 +14,12 @@ protocol ContentDataSource: UICollectionViewDataSource {
 
 class CollectionViewListDataSource: NSObject {
     private let listService: ListService
-    private let imageCache: ImageCache
     private let reuseIdentifier: String = "cell"
     
     private var ads: [BasicAd] = []
     
     private weak var collectionView: UICollectionView?
+    private let cellProvider: HNCellProvider
     
     required init(listService: ListService,
                   collectionView: UICollectionView,
@@ -27,20 +27,13 @@ class CollectionViewListDataSource: NSObject {
         
         self.listService = listService
         self.collectionView = collectionView
-        self.imageCache = imageCache
+        self.cellProvider = HNCellProvider(imageCache: imageCache)
         
         super.init()
-        registerCell(in: collectionView)
     }
 }
 
-extension CollectionViewListDataSource {
-    func registerCell(in collectionView: UICollectionView) {
-        let nib = UINib(nibName: "HNCollectionViewCell", bundle: Bundle(for: type(of: self)))
-        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
-    }
-}
-
+// MARK: - DataSource
 extension CollectionViewListDataSource: ContentDataSource {
     func restart() {
         listService.resetList { [weak self] (listAds) in
@@ -58,41 +51,9 @@ extension CollectionViewListDataSource: ContentDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell =
-            collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-                as? HNCollectionViewCell else { fatalError("Cell could not be founds, CRASH!") }
-        
         let ad = ads[indexPath.item]
-        setCellValues(cell, with: ad)
-        setCellImage(cell, with: ad)
-        
-        return cell
-    }
-}
-
-// MARK: - Helper functions
-extension CollectionViewListDataSource {
-    func setCellValues(_ cell: HNCollectionViewCell, with ad: BasicAd) {
-        cell.titleLabel.text = ad.title
-        cell.areaLabel.text = ad.location
-        
-        cell.topCollection.leftLabel.text = ad.price
-        cell.topCollection.middleLabel.text = String(ad.livingArea) + " m2"
-        cell.topCollection.rightLabel.text = String(ad.numberOfRooms)  + " rum"
-        
-        cell.bottomCollection.leftLabel.text = ad.monthlyFee
-        cell.bottomCollection.rightLabel.text = String(ad.daysOnHemnet) + " dagar"
-    }
-    
-    func setCellImage(_ cell: HNCollectionViewCell, with ad: BasicAd) {
-        cell.thumbnailIdentifier = ad.thumbnail
-        
-        imageCache.image(for: ad.thumbnail) { (image, identifier) in
-            DispatchQueue.main.async {
-                if cell.thumbnailIdentifier == identifier {
-                    cell.imageView.image = image
-                }
-            }
-        }
+        return cellProvider.configureCell(´for´: ad,
+                                          in: collectionView,
+                                          at: indexPath)
     }
 }

@@ -33,6 +33,7 @@
 		B93E364E2168E9C70023C4E3 /* HemnetImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E364D2168E9C70023C4E3 /* HemnetImageService.swift */; };
 		B93E36502168E9E20023C4E3 /* HemnetImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E364F2168E9E20023C4E3 /* HemnetImageCache.swift */; };
 		B93E36522168EA250023C4E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E36512168EA250023C4E3 /* ImageCache.swift */; };
+		B98BAB7221695A6900D980A6 /* HNCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB7121695A6900D980A6 /* HNCellProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		B93E364D2168E9C70023C4E3 /* HemnetImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemnetImageService.swift; sourceTree = "<group>"; };
 		B93E364F2168E9E20023C4E3 /* HemnetImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemnetImageCache.swift; sourceTree = "<group>"; };
 		B93E36512168EA250023C4E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		B98BAB7121695A6900D980A6 /* HNCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCellProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B92266822168FF0000D874D3 /* CollectionViewListDataSource.swift */,
+				B98BAB7121695A6900D980A6 /* HNCellProvider.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				B93E36522168EA250023C4E3 /* ImageCache.swift in Sources */,
 				B93E364E2168E9C70023C4E3 /* HemnetImageService.swift in Sources */,
 				B92AF68B2168E6FE00B43FB7 /* HemnetListService.swift in Sources */,
+				B98BAB7221695A6900D980A6 /* HNCellProvider.swift in Sources */,
 				B92AF6822168E3E400B43FB7 /* ListAd.swift in Sources */,
 				B92AF6442168E02D00B43FB7 /* ViewController.swift in Sources */,
 				B92AF6842168E3F600B43FB7 /* ListResult.swift in Sources */,
