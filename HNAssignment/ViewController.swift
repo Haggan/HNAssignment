@@ -8,5 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {}
+class ViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    var dataSource: ContentDataSource? {
+        didSet {
+            collectionView.dataSource = dataSource
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let apiService = HemnetMockApiService()
+        let listService = HemnetListService(apiService: apiService)
+        let imageService = HemnetImageService(urlSession: URLSession.shared) // URLSession.shared for convenience atm
+        let imageCache = HemnetImageCache(imageService: imageService)
+        
+        self.dataSource = CollectionViewListDataSource(listService: listService,
+                                                       collectionView: collectionView,
+                                                       imageCache: imageCache)
+        
+        collectionView.collectionViewLayout = collectionViewLayout
+        dataSource?.restart()
+    }
+}
+
+extension ViewController {
+    var collectionViewLayout: UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: collectionView.frame.size.width, height: 88)
+        
+        return layout
+    }
+}
 

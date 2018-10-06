@@ -36,7 +36,7 @@ class CollectionViewListDataSource: NSObject {
 
 extension CollectionViewListDataSource {
     func registerCell(in collectionView: UICollectionView) {
-        let nib = UINib(nibName: "HNColletionViewCell", bundle: Bundle(for: type(of: self)))
+        let nib = UINib(nibName: "HNCollectionViewCell", bundle: Bundle(for: type(of: self)))
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
     }
 }
