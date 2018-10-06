@@ -55,7 +55,9 @@ extension CollectionViewListDataSource: ContentDataSource {
         return ads.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell =
             collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
                 as? HNCollectionViewCell else { fatalError("Cell could not be founds, CRASH!") }
@@ -64,6 +66,16 @@ extension CollectionViewListDataSource: ContentDataSource {
         
         cell.titleLabel.text = ad.title
         cell.areaLabel.text = ad.location
+        cell.thumbnailIdentifier = ad.thumbnail
+        
+        imageCache.image(for: ad.thumbnail) { (image, identifier) in
+            DispatchQueue.main.async {
+                if cell.thumbnailIdentifier == identifier {
+                    cell.imageView.image = image
+                }
+            }
+        }
+        
         
         return cell
     }

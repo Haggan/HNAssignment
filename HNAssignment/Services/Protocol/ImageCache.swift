@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ImageCache {
-    func image(for urlString: String, completion: @escaping (UIImage?) -> ())
+    func image(for urlString: String, completion: @escaping (UIImage?, String) -> ())
 }

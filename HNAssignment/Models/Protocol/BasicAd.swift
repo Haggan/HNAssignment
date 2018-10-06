@@ -14,4 +14,5 @@ protocol BasicAd {
     var title: String { get }
     var location: String { get }
     var price: String { get }
+    var thumbnail: String { get }
 }

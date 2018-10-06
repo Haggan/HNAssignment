@@ -19,11 +19,14 @@ extension ImageService {
         guard let url = URL(string: urlString) else { fatalError("No proper url") }
         
         urlSession.dataTask(with: url) { (data, response, error) in
-            guard error != nil else { fatalError("ERROR!") }
+            guard error == nil else { fatalError("ERROR!") }
             guard let data = data else { fatalError("No data") }
-            guard let imageData = UIImage(data: data) else { fatalError("Data from request was corrupted") }
+            guard let imageData = UIImage(data: data) else {
+                completion(nil)
+                return
+            }
             
             completion(imageData)
-        }
+        }.resume()
     }
 }
