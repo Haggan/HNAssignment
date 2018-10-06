@@ -19,41 +19,41 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-FG-6lg">
-                        <rect key="frame" x="0.0" y="50" width="88" height="88"/>
+                        <rect key="frame" x="8" y="50" width="88" height="88"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="88" id="2Ro-o3-jUK"/>
                             <constraint firstAttribute="width" constant="88" id="q2C-na-eqm"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-UN-KAu">
-                        <rect key="frame" x="96" y="8" width="22" height="22"/>
+                        <rect key="frame" x="104" y="8" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="DjO-6R-g3U"/>
                             <constraint firstAttribute="height" constant="22" id="HDx-eK-9CR"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i48-0s-VqW">
-                        <rect key="frame" x="126" y="10.5" width="246" height="19.5"/>
+                        <rect key="frame" x="134" y="10.5" width="238" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HZ-mD-23E">
-                        <rect key="frame" x="96" y="34" width="276" height="18"/>
+                        <rect key="frame" x="104" y="34" width="268" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3H-TC-GIu" customClass="LabelCollection" customModule="HNAssignment" customModuleProvider="target">
-                        <rect key="frame" x="96" y="56" width="276" height="16"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="104" y="56" width="268" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="Zzg-oE-FaG"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqg-IX-l2c" customClass="LabelCollection" customModule="HNAssignment" customModuleProvider="target">
-                        <rect key="frame" x="96" y="76" width="276" height="16"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="104" y="76" width="268" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="p8G-FD-2re"/>
                         </constraints>
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bortagen före visning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igG-36-zoa">
-                        <rect key="frame" x="0.0" y="50" width="85.5" height="10"/>
+                        <rect key="frame" x="8" y="50" width="85.5" height="10"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +81,7 @@
                 <constraint firstAttribute="trailing" secondItem="m3H-TC-GIu" secondAttribute="trailing" constant="8" id="7Ui-TW-bOt"/>
                 <constraint firstItem="i48-0s-VqW" firstAttribute="leading" secondItem="Zu2-UN-KAu" secondAttribute="trailing" constant="8" id="DCt-Zl-eiN"/>
                 <constraint firstItem="LAZ-FG-6lg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="FAd-a7-C1a"/>
-                <constraint firstItem="LAZ-FG-6lg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FSX-On-HWU"/>
+                <constraint firstItem="LAZ-FG-6lg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="FSX-On-HWU"/>
                 <constraint firstItem="IV0-N3-TFZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JzX-Er-LQo"/>
                 <constraint firstItem="Zu2-UN-KAu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Ofu-Y6-oET"/>
                 <constraint firstItem="m3H-TC-GIu" firstAttribute="top" secondItem="4HZ-mD-23E" secondAttribute="bottom" constant="4" id="Z97-FH-Z2e"/>

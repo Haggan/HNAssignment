@@ -28,4 +28,16 @@ class HNCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var removedLabel: UILabel!
     
     var thumbnailIdentifier: String?
+    
+    override var isHighlighted: Bool {
+        didSet {
+            if isHighlighted == true {
+                contentView.backgroundColor = .lightGray
+                contentView.alpha = 0.5
+            } else {
+                contentView.backgroundColor = .white
+                contentView.alpha = 1
+            }
+        }
+    }
 }
