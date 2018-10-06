@@ -19,10 +19,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let apiService = HemnetMockApiService()
-        let listService = HemnetListService(apiService: apiService)
-        let imageService = HemnetImageService(urlSession: URLSession.shared) // URLSession.shared for convenience atm
-        let imageCache = HemnetImageCache(imageService: imageService)
+        let apiService = HNMockApiService()
+        let listService = HNListService(apiService: apiService)
+        let imageService = HNImageService(urlSession: URLSession.shared) // URLSession.shared for convenience atm
+        let imageCache = HNImageCache(imageService: imageService)
         
         self.dataSource = CollectionViewListDataSource(listService: listService,
                                                        collectionView: collectionView,

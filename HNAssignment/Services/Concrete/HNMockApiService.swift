@@ -1,5 +1,5 @@
 //
-//  HemnetMockApiService.swift
+//  HNMockApiService.swift
 //  HNAssignment
 //
 //  Created by Robert Hagklint on 2018-10-06.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HemnetMockApiService: ApiService {
+struct HNMockApiService: ApiService {
     func fetchList(_ result: (ApiResult<Data>) -> ()) {
         /**
          Mocking ApiService by using a json file to "fetch" the list. This is code that would not be in the regular

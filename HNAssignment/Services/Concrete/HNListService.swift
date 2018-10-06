@@ -1,5 +1,5 @@
 //
-//  HemnetListService.swift
+//  HNListService.swift
 //  HNAssignment
 //
 //  Created by Robert Hagklint on 2018-10-06.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct HemnetListService {
+struct HNListService {
     let apiService: ApiService
 }
 
-extension HemnetListService: ListService {
+extension HNListService: ListService {
     
     // NOTE:
     // We return a closure that contains basic ad's and not listResult because ListResult has to contain

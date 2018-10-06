@@ -1,5 +1,5 @@
 //
-//  HemnetImageService.swift
+//  HNImageService.swift
 //  HNAssignment
 //
 //  Created by Robert Hagklint on 2018-10-06.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct HemnetImageService: ImageService {
+struct HNImageService: ImageService {
     let urlSession: URLSession
 }

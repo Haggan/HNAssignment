@@ -1,5 +1,5 @@
 //
-//  HemnetImageCache.swift
+//  HNImageCache.swift
 //  HNAssignment
 //
 //  Created by Robert Hagklint on 2018-10-06.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class HemnetImageCache {
+class HNImageCache {
     private let service: ImageService
     private var images: [String : UIImage] = [:] // Replace with Cache/NSCache later
     
     required init(imageService: ImageService) { self.service = imageService }
 }
 
-extension HemnetImageCache: ImageCache {
+extension HNImageCache: ImageCache {
     
     /**
      Fetch image with url. If the image is already downloaded, this will return instantly. Else it will download
