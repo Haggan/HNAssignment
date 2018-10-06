@@ -19,6 +19,10 @@
 		B92AF6772168E23200B43FB7 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF6762168E23200B43FB7 /* ListService.swift */; };
 		B92AF67B2168E25B00B43FB7 /* BasicAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF67A2168E25B00B43FB7 /* BasicAd.swift */; };
 		B92AF67D2168E2BC00B43FB7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF67C2168E2BC00B43FB7 /* ImageService.swift */; };
+		B92AF67F2168E39F00B43FB7 /* AdEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF67E2168E39F00B43FB7 /* AdEnums.swift */; };
+		B92AF6822168E3E400B43FB7 /* ListAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF6812168E3E400B43FB7 /* ListAd.swift */; };
+		B92AF6842168E3F600B43FB7 /* ListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF6832168E3F600B43FB7 /* ListResult.swift */; };
+		B92AF6872168E4A600B43FB7 /* Result.json in Resources */ = {isa = PBXBuildFile; fileRef = B92AF6862168E4A600B43FB7 /* Result.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		B92AF6762168E23200B43FB7 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
 		B92AF67A2168E25B00B43FB7 /* BasicAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAd.swift; sourceTree = "<group>"; };
 		B92AF67C2168E2BC00B43FB7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		B92AF67E2168E39F00B43FB7 /* AdEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdEnums.swift; sourceTree = "<group>"; };
+		B92AF6812168E3E400B43FB7 /* ListAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAd.swift; sourceTree = "<group>"; };
+		B92AF6832168E3F600B43FB7 /* ListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResult.swift; sourceTree = "<group>"; };
+		B92AF6862168E4A600B43FB7 /* Result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Result.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 		B92AF6402168E02D00B43FB7 /* HNAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				B92AF6852168E49A00B43FB7 /* Resources */,
 				B92AF6782168E24700B43FB7 /* Models */,
 				B92AF66F2168E19500B43FB7 /* Services */,
 				B92AF6412168E02D00B43FB7 /* AppDelegate.swift */,
@@ -167,6 +176,7 @@
 		B92AF6782168E24700B43FB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B92AF6802168E3B700B43FB7 /* Concrete */,
 				B92AF6792168E24F00B43FB7 /* Protocol */,
 			);
 			path = Models;
@@ -176,8 +186,26 @@
 			isa = PBXGroup;
 			children = (
 				B92AF67A2168E25B00B43FB7 /* BasicAd.swift */,
+				B92AF67E2168E39F00B43FB7 /* AdEnums.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B92AF6802168E3B700B43FB7 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				B92AF6812168E3E400B43FB7 /* ListAd.swift */,
+				B92AF6832168E3F600B43FB7 /* ListResult.swift */,
+			);
+			path = Concrete;
+			sourceTree = "<group>";
+		};
+		B92AF6852168E49A00B43FB7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B92AF6862168E4A600B43FB7 /* Result.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +314,7 @@
 			files = (
 				B92AF64C2168E02E00B43FB7 /* LaunchScreen.storyboard in Resources */,
 				B92AF6492168E02E00B43FB7 /* Assets.xcassets in Resources */,
+				B92AF6872168E4A600B43FB7 /* Result.json in Resources */,
 				B92AF6472168E02D00B43FB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,11 +340,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92AF6822168E3E400B43FB7 /* ListAd.swift in Sources */,
 				B92AF6442168E02D00B43FB7 /* ViewController.swift in Sources */,
+				B92AF6842168E3F600B43FB7 /* ListResult.swift in Sources */,
 				B92AF6422168E02D00B43FB7 /* AppDelegate.swift in Sources */,
 				B92AF6772168E23200B43FB7 /* ListService.swift in Sources */,
 				B92AF6732168E1CC00B43FB7 /* ApiService.swift in Sources */,
 				B92AF6752168E20000B43FB7 /* ApiEnums.swift in Sources */,
+				B92AF67F2168E39F00B43FB7 /* AdEnums.swift in Sources */,
 				B92AF67B2168E25B00B43FB7 /* BasicAd.swift in Sources */,
 				B92AF67D2168E2BC00B43FB7 /* ImageService.swift in Sources */,
 			);

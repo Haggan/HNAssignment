@@ -8,4 +8,10 @@
 
 import Foundation
 
-protocol BasicAd {}
+protocol BasicAd {
+    var listing: ListingType { get }
+    var identifier: String { get }
+    var title: String { get }
+    var location: String { get }
+    var price: String { get }
+}
