@@ -25,6 +25,9 @@
 		B92AF6872168E4A600B43FB7 /* Result.json in Resources */ = {isa = PBXBuildFile; fileRef = B92AF6862168E4A600B43FB7 /* Result.json */; };
 		B92AF6892168E61F00B43FB7 /* HemnetMockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF6882168E61F00B43FB7 /* HemnetMockApiService.swift */; };
 		B92AF68B2168E6FE00B43FB7 /* HemnetListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AF68A2168E6FE00B43FB7 /* HemnetListService.swift */; };
+		B93E364E2168E9C70023C4E3 /* HemnetImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E364D2168E9C70023C4E3 /* HemnetImageService.swift */; };
+		B93E36502168E9E20023C4E3 /* HemnetImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E364F2168E9E20023C4E3 /* HemnetImageCache.swift */; };
+		B93E36522168EA250023C4E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E36512168EA250023C4E3 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		B92AF6862168E4A600B43FB7 /* Result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Result.json; sourceTree = "<group>"; };
 		B92AF6882168E61F00B43FB7 /* HemnetMockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemnetMockApiService.swift; sourceTree = "<group>"; };
 		B92AF68A2168E6FE00B43FB7 /* HemnetListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemnetListService.swift; sourceTree = "<group>"; };
+		B93E364D2168E9C70023C4E3 /* HemnetImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemnetImageService.swift; sourceTree = "<group>"; };
+		B93E364F2168E9E20023C4E3 /* HemnetImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemnetImageCache.swift; sourceTree = "<group>"; };
+		B93E36512168EA250023C4E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 				B92AF6742168E20000B43FB7 /* ApiEnums.swift */,
 				B92AF6762168E23200B43FB7 /* ListService.swift */,
 				B92AF67C2168E2BC00B43FB7 /* ImageService.swift */,
+				B93E36512168EA250023C4E3 /* ImageCache.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -175,6 +182,8 @@
 			children = (
 				B92AF6882168E61F00B43FB7 /* HemnetMockApiService.swift */,
 				B92AF68A2168E6FE00B43FB7 /* HemnetListService.swift */,
+				B93E364D2168E9C70023C4E3 /* HemnetImageService.swift */,
+				B93E364F2168E9E20023C4E3 /* HemnetImageCache.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -346,6 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93E36522168EA250023C4E3 /* ImageCache.swift in Sources */,
+				B93E364E2168E9C70023C4E3 /* HemnetImageService.swift in Sources */,
 				B92AF68B2168E6FE00B43FB7 /* HemnetListService.swift in Sources */,
 				B92AF6822168E3E400B43FB7 /* ListAd.swift in Sources */,
 				B92AF6442168E02D00B43FB7 /* ViewController.swift in Sources */,
@@ -356,6 +367,7 @@
 				B92AF6752168E20000B43FB7 /* ApiEnums.swift in Sources */,
 				B92AF67F2168E39F00B43FB7 /* AdEnums.swift in Sources */,
 				B92AF6892168E61F00B43FB7 /* HemnetMockApiService.swift in Sources */,
+				B93E36502168E9E20023C4E3 /* HemnetImageCache.swift in Sources */,
 				B92AF67B2168E25B00B43FB7 /* BasicAd.swift in Sources */,
 				B92AF67D2168E2BC00B43FB7 /* ImageService.swift in Sources */,
 			);
