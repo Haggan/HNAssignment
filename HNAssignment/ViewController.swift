@@ -15,6 +15,11 @@ class ViewController: UIViewController {
             collectionView.dataSource = dataSource
         }
     }
+    var delegate: UICollectionViewDelegate? {
+        didSet {
+            collectionView.delegate = delegate
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +32,9 @@ class ViewController: UIViewController {
         self.dataSource = CollectionViewListDataSource(listService: listService,
                                                        collectionView: collectionView,
                                                        imageCache: imageCache)
+        
+        self.delegate = CollectionViewListDelegate(parent: self.navigationController!, // we know this exists
+                                                   dataSource: dataSource!) // we know this exists
         
         collectionView.collectionViewLayout = collectionViewLayout
         dataSource?.restart()
@@ -41,4 +49,3 @@ extension ViewController {
         return layout
     }
 }
-

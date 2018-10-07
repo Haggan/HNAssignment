@@ -10,13 +10,14 @@ import UIKit
 
 protocol ContentDataSource: UICollectionViewDataSource {
     func restart()
+    var ads: [BasicAd] { get }
 }
 
 class CollectionViewListDataSource: NSObject {
     private let listService: ListService
     private let reuseIdentifier: String = "cell"
     
-    private var ads: [BasicAd] = []
+    private(set) var ads: [BasicAd] = []
     
     private weak var collectionView: UICollectionView?
     private let cellProvider: HNCellProvider

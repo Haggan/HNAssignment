@@ -34,6 +34,8 @@
 		B93E36502168E9E20023C4E3 /* HNImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E364F2168E9E20023C4E3 /* HNImageCache.swift */; };
 		B93E36522168EA250023C4E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93E36512168EA250023C4E3 /* ImageCache.swift */; };
 		B98BAB7221695A6900D980A6 /* HNCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB7121695A6900D980A6 /* HNCellProvider.swift */; };
+		B98BAB742169F1DE00D980A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB732169F1DE00D980A6 /* DetailViewController.swift */; };
+		B9E5208F2169F77B00E7107F /* CollectionViewListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5208E2169F77B00E7107F /* CollectionViewListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		B93E364F2168E9E20023C4E3 /* HNImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNImageCache.swift; sourceTree = "<group>"; };
 		B93E36512168EA250023C4E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		B98BAB7121695A6900D980A6 /* HNCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCellProvider.swift; sourceTree = "<group>"; };
+		B98BAB732169F1DE00D980A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B9E5208E2169F77B00E7107F /* CollectionViewListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewListDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 		B92AF6402168E02D00B43FB7 /* HNAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				B9E5208D2169F76000E7107F /* Delegates */,
 				B9226684216900B900D874D3 /* Views */,
 				B92266812168FEE400D874D3 /* DataSources */,
 				B92AF6852168E49A00B43FB7 /* Resources */,
@@ -168,6 +173,7 @@
 				B92AF6482168E02E00B43FB7 /* Assets.xcassets */,
 				B92AF64A2168E02E00B43FB7 /* LaunchScreen.storyboard */,
 				B92AF64D2168E02E00B43FB7 /* Info.plist */,
+				B98BAB732169F1DE00D980A6 /* DetailViewController.swift */,
 			);
 			path = HNAssignment;
 			sourceTree = "<group>";
@@ -255,6 +261,14 @@
 				B92AF6862168E4A600B43FB7 /* Result.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9E5208D2169F76000E7107F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B9E5208E2169F77B00E7107F /* CollectionViewListDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,10 +408,12 @@
 				B93E36522168EA250023C4E3 /* ImageCache.swift in Sources */,
 				B93E364E2168E9C70023C4E3 /* HNImageService.swift in Sources */,
 				B92AF68B2168E6FE00B43FB7 /* HNListService.swift in Sources */,
+				B9E5208F2169F77B00E7107F /* CollectionViewListDelegate.swift in Sources */,
 				B98BAB7221695A6900D980A6 /* HNCellProvider.swift in Sources */,
 				B92AF6822168E3E400B43FB7 /* ListAd.swift in Sources */,
 				B92AF6442168E02D00B43FB7 /* ViewController.swift in Sources */,
 				B92AF6842168E3F600B43FB7 /* ListResult.swift in Sources */,
+				B98BAB742169F1DE00D980A6 /* DetailViewController.swift in Sources */,
 				B92AF6422168E02D00B43FB7 /* AppDelegate.swift in Sources */,
 				B92266832168FF0000D874D3 /* CollectionViewListDataSource.swift in Sources */,
 				B9226687216900D400D874D3 /* HNCollectionViewCell.swift in Sources */,
